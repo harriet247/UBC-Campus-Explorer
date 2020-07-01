@@ -1,0 +1,33 @@
+{
+	"title": "Invalid for having underscore in ID string in mfield",
+	"query": {
+		"WHERE": {
+			"AND": [{
+					"GT": {
+						"courses_avg": 88
+					}
+				},
+				{
+					"GT": {
+						"courses_year": 2005
+					}
+				},
+				{
+					"IS": {
+						"courses_uuid": "*3"
+					}
+				}
+			]
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"cour_ses_avg",
+				"courses_title",
+				"courses_uuid"
+			],
+			"ORDER": "courses_avg"
+		}
+	},
+	"isQueryValid": false,
+	"result": "InsightError"
+}

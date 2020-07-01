@@ -1,0 +1,33 @@
+{
+	"title": "Invalid for accessing not added dataset",
+	"query": {
+		"WHERE": {
+			"AND": [{
+					"GT": {
+						"test_avg": 88
+					}
+				},
+				{
+					"GT": {
+						"test_year": 2005
+					}
+				},
+				{
+					"IS": {
+						"test_uuid": "*3"
+					}
+				}
+			]
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"test_avg",
+				"test_title",
+				"test_uuid"
+			],
+			"ORDER": "test_avg"
+		}
+	},
+	"isQueryValid": false,
+	"result": "InsightError"
+}

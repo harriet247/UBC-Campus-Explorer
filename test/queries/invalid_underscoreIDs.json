@@ -1,0 +1,33 @@
+{
+	"title": "Invalid for having underscore in ID string in sield",
+	"query": {
+		"WHERE": {
+			"AND": [{
+					"GT": {
+						"courses_avg": 88
+					}
+				},
+				{
+					"GT": {
+						"courses_year": 2005
+					}
+				},
+				{
+					"IS": {
+						"cour_ses_uuid": "*3"
+					}
+				}
+			]
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"courses_avg",
+				"courses_title",
+				"courses_uuid"
+			],
+			"ORDER": "courses_avg"
+		}
+	},
+	"isQueryValid": false,
+	"result": "InsightError"
+}

@@ -1,0 +1,29 @@
+{
+    "title": "Invalid for options missing columns and orders",
+    "query": {
+        "WHERE": {
+            "AND": [
+                {
+                    "GT": {
+                        "courses_avg": 88
+                    }
+                },
+                {
+                    "GT": {
+                        "courses_year": 2005
+                    }
+                },
+                {
+                    "IS": {
+                        "courses_uuid": "*3"
+                    }
+                }
+          ]
+        },
+      "OPTIONS": {
+
+        }
+    },
+    "isQueryValid": false,
+    "result": "InsightError"
+}

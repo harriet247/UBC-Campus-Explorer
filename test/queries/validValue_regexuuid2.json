@@ -1,0 +1,28 @@
+{
+    "title": "Valid regex value type in uuid",
+    "query": {
+        "WHERE": {
+            "AND":[
+                {
+                    "GT": {
+                        "courses_avg" : 97
+                    }
+                },
+                {
+                   "IS":{
+                    "courses_uuid":"*1"
+                     }
+                }
+            ]
+
+        },
+        "OPTIONS": {
+            "COLUMNS":[
+                "courses_dept",
+                "courses_avg"
+             ],
+             "ORDER":"courses_avg"
+    }
+},
+    "isQueryValid": true,
+    "result":[{"courses_dept":"epse","courses_avg":97.29},{"courses_dept":"nurs","courses_avg":97.33},{"courses_dept":"epse","courses_avg":97.41},{"courses_dept":"epse","courses_avg":98.36},{"courses_dept":"nurs","courses_avg":98.5},{"courses_dept":"nurs","courses_avg":98.58}]}

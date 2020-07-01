@@ -1,0 +1,28 @@
+{
+    "title": "Invalid null type for audit value",
+    "query": {
+            "WHERE": {
+                "AND": [
+                    {
+                        "LT": {
+                            "courses_audit": null
+                        }
+                    },
+                    {
+                        "GT": {
+                            "courses_avg": 97
+                        }
+                    }
+              ]
+            },
+            "OPTIONS": {
+              "COLUMNS": [
+                "courses_avg",
+                "courses_title"
+              ],
+              "ORDER": "courses_avg"
+            }
+          },
+    "isQueryValid": false,
+    "result": "InsightError"
+}

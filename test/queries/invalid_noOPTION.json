@@ -1,0 +1,25 @@
+{
+	"title": "Invalid for no OPTIONs",
+	"query": {
+		"WHERE": {
+			"AND": [{
+					"GT": {
+						"courses_avg": 88
+					}
+				},
+				{
+					"GT": {
+						"courses_year": 2005
+					}
+				},
+				{
+					"IS": {
+						"courses_uuid": "*3"
+					}
+				}
+			]
+		}
+	},
+	"isQueryValid": false,
+	"result": "InsightError"
+}

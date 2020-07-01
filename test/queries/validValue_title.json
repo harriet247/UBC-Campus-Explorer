@@ -1,0 +1,29 @@
+{
+    "title": "Valid empty string value type in title",
+    "query": {
+        "WHERE": {
+            "AND":[
+                {
+                    "GT": {
+                        "courses_avg" : 97
+                    }
+                },
+                {
+                   "IS":{
+                    "courses_title":""
+                     }
+                }
+            ]
+
+        },
+        "OPTIONS": {
+            "COLUMNS":[
+                "courses_title",
+                "courses_avg"
+             ],
+             "ORDER":"courses_avg"
+    }
+},
+    "isQueryValid": true,
+    "result":[]
+}

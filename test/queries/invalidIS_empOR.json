@@ -1,0 +1,28 @@
+{
+	"title": "invalid for empty LT in OR",
+	"query": {
+		"WHERE": {
+			"OR": [{
+					"IS": {
+
+					}
+				},
+				{
+					"IS": {
+						"courses_uuid": ""
+					}
+				}
+			]
+
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"courses_uuid",
+				"courses_avg"
+			],
+			"ORDER": "courses_avg"
+		}
+	},
+	"isQueryValid": false,
+	"result": "InsightError"
+}

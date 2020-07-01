@@ -1,0 +1,33 @@
+{
+	"title": "Invalid where having more than 1 key",
+	"query": {
+		"WHERE": {
+			"OR": [{
+					"GT": {
+						"courses_avg": 97
+					}
+				},
+				{
+					"IS": {
+						"courses_uuid": ""
+					}
+				}
+			],
+			"AND": [{
+				"LT": {
+					"courses_avg": 97
+				}
+			}]
+
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"courses_uuid",
+				"courses_avg"
+			],
+			"ORDER": "courses_avg"
+		}
+	},
+	"isQueryValid": false,
+	"result": "InsightError"
+}

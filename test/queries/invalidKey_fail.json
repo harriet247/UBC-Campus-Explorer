@@ -1,0 +1,19 @@
+{
+    "title": "Invalid key type in fail",
+    "query": {
+        "WHERE": {
+            "IS":{
+                "courses_fail": 123
+             }
+        },
+        "OPTIONS": {
+            "COLUMNS":[
+                "courses_dept",
+                "courses_avg"
+             ],
+             "ORDER":"courses_avg"
+    }
+},
+    "isQueryValid": false,
+    "result": "InsightError"
+}

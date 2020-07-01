@@ -1,0 +1,54 @@
+{
+    "title": "valid for having a order keys with multiple items",
+    "query": {
+        "WHERE": {
+            "AND": [
+                {
+                    "IS": {
+                        "rooms_furniture": "*Tables*"
+                    }
+                },
+                {
+                    "GT": {
+                        "rooms_seats": 300
+                    }
+                }
+            ]
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "rooms_shortname",
+                "maxseats",
+                "countcheck",
+                "rooms_href"
+            ],
+            "ORDER": {
+                "dir": "DOWN",
+                "keys": [
+                    "rooms_shortname",
+                    "rooms_href"
+                ]
+            }
+        },
+        "TRANSFORMATIONS": {
+            "GROUP": [
+                "rooms_shortname",
+                "rooms_href"
+            ],
+            "APPLY": [
+                {
+                    "maxseats": {
+                        "MAX" : "rooms_seats"
+                    }
+                },
+                {
+                    "countcheck": {
+                        "COUNT": "rooms_fullname"
+                    }
+                }
+            ]
+        }
+    }
+    ,
+    "isQueryValid": true,
+    "result":[{"rooms_shortname":"OSBO","maxseats":442,"countcheck":1,"rooms_href":"http://students.ubc.ca/campus/discover/buildings-and-classrooms/room/OSBO-A"},{"rooms_shortname":"LSC","maxseats":350,"countcheck":1,"rooms_href":"http://students.ubc.ca/campus/discover/buildings-and-classrooms/room/LSC-1002"},{"rooms_shortname":"LSC","maxseats":350,"countcheck":1,"rooms_href":"http://students.ubc.ca/campus/discover/buildings-and-classrooms/room/LSC-1001"},{"rooms_shortname":"HEBB","maxseats":375,"countcheck":1,"rooms_href":"http://students.ubc.ca/campus/discover/buildings-and-classrooms/room/HEBB-100"}]}

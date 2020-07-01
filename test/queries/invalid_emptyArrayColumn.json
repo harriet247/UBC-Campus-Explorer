@@ -1,0 +1,35 @@
+{
+    "title": "invalid for  empty Columns array",
+    "query": {
+        "WHERE": {
+          "OR": [
+
+            {
+              "AND": [
+                {
+                  "GT": {
+                    "courses_avg": 90
+                  }
+                },
+                {
+                  "IS": {
+                    "courses_dept": "adhe"
+                  }
+                }
+              ]
+            },
+            {
+              "EQ": {
+                "courses_avg": 95
+              }
+            }
+          ]
+        },
+        "OPTIONS": {
+          "COLUMNS": [],
+          "ORDER": "courses_avg"
+        }
+      },
+    "isQueryValid": false,
+    "result":"InsightError"
+}

@@ -1,0 +1,19 @@
+{
+    "title": "Invalid key type for avg",
+    "query": {
+        "WHERE": {
+            "IS":{
+                "courses_avg": 96
+             }
+        },
+        "OPTIONS": {
+            "COLUMNS":[
+                "courses_dept",
+                "courses_avg"
+             ],
+             "ORDER":"courses_avg"
+    }
+},
+    "isQueryValid": false,
+    "result": "InsightError"
+}

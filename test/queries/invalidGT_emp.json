@@ -1,0 +1,33 @@
+{
+	"title": "invalid for empty GT",
+	"query": {
+		"WHERE": {
+			"AND": [{
+					"GT": {
+
+					}
+				},
+				{
+					"GT": {
+						"courses_avg": 88
+					}
+				},
+				{
+					"IS": {
+						"courses_uuid": "*3"
+					}
+				}
+			]
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"courses_avg",
+				"courses_title",
+				"courses_uuid"
+			],
+			"ORDER": "courses_avg"
+		}
+	},
+	"isQueryValid": false,
+	"result": "InsightError"
+}

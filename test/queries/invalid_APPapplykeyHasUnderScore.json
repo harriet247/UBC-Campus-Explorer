@@ -1,0 +1,44 @@
+{
+    "title": "Invalid--> apply key contain underscore",
+    "query": {
+        "WHERE": {
+          "AND": [
+            {
+              "IS": {
+                "rooms_furniture": "*Tables*"
+              }
+            },
+            {
+              "GT": {
+                "rooms_seats": 300
+              }
+            }
+          ]
+        },
+        "OPTIONS": {
+          "COLUMNS": [
+            "rooms_shortname"
+          ],
+          "ORDER": {
+            "dir": "TEST",
+            "keys": [
+              "rooms_shortname"
+            ]
+          }
+        },
+        "TRANSFORMATIONS": {
+          "GROUP": [
+            "rooms_shortname"
+          ],
+          "APPLY": [
+            {
+              "max_Seats": {
+                "MAX": "rooms_seats"
+              }
+            }
+          ]
+        }
+      },
+    "isQueryValid": false,
+    "result":"InsightError"
+}

@@ -1,0 +1,29 @@
+{
+    "title": "Valid regex value type in dept",
+    "query": {
+        "WHERE": {
+            "AND":[
+                {
+                    "GT": {
+                        "courses_avg" : 97
+                    }
+                },
+                {
+                   "IS":{
+                    "courses_dept":"*a"
+                     }
+                }
+            ]
+
+        },
+        "OPTIONS": {
+            "COLUMNS":[
+                "courses_dept",
+                "courses_avg"
+             ],
+             "ORDER":"courses_avg"
+    }
+},
+    "isQueryValid": true,
+    "result":[]
+}

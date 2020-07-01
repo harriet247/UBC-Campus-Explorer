@@ -1,0 +1,33 @@
+{
+    "title": "Invalid null type for pass value",
+    "query": {
+            "WHERE": {
+                "AND": [
+                    {
+                        "GT": {
+                            "courses_avg": 97
+                        }
+                    },
+                    {
+                        "GT": {
+                            "courses_year": 2005
+                        }
+                    },
+                    {
+                        "LT": {
+                            "courses_pass": null
+                        }
+                    }
+              ]
+            },
+            "OPTIONS": {
+              "COLUMNS": [
+                "courses_avg",
+                "courses_title"
+              ],
+              "ORDER": "courses_avg"
+            }
+          },
+    "isQueryValid": false,
+    "result": "InsightError"
+}

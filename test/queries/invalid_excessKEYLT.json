@@ -1,0 +1,36 @@
+{
+    "title": "Invalid for having 2 keys in LT",
+    "query": {
+        "WHERE": {
+            "AND": [
+                {
+                    "LT": {
+                        "courses_avg": 88,
+                        "courses_id" : "*3"
+                    }
+
+                },
+                {
+                    "GT": {
+                        "courses_year": 2005
+                    }
+                },
+                {
+                    "IS": {
+                        "courses_uuid": "*3"
+                    }
+                }
+          ]
+        },
+      "OPTIONS": {
+          "COLUMNS": [
+            "courses_avg",
+            "courses_title",
+            "courses_uuid"
+          ],
+          "ORDER": "courses_avg"
+        }
+    },
+    "isQueryValid": false,
+    "result": "InsightError"
+}

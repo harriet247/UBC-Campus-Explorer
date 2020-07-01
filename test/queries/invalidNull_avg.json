@@ -1,0 +1,28 @@
+{
+    "title": "Invalid null type for avg value",
+    "query": {
+            "WHERE": {
+                "AND": [
+                    {
+                        "GT": {
+                            "courses_avg": null
+                        }
+                    },
+                    {
+                        "GT": {
+                            "courses_year": 2005
+                        }
+                    }
+              ]
+            },
+            "OPTIONS": {
+              "COLUMNS": [
+                "courses_avg",
+                "courses_title"
+              ],
+              "ORDER": "courses_avg"
+            }
+          },
+    "isQueryValid": false,
+    "result": "InsightError"
+}

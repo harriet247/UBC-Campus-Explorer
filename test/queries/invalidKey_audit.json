@@ -1,0 +1,19 @@
+{
+    "title": "Invalid key type for audit",
+    "query": {
+        "WHERE": {
+            "IS":{
+                "courses_audit":96
+             }
+        },
+        "OPTIONS": {
+            "COLUMNS":[
+                "courses_dept",
+                "courses_avg"
+             ],
+             "ORDER":"courses_avg"
+    }
+},
+    "isQueryValid": false,
+    "result": "InsightError"
+}

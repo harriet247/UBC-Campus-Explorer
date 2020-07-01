@@ -1,0 +1,15 @@
+{
+	"title": "Invalid for where is not a object",
+	"query": {
+		"WHERE": [],
+		"OPTIONS": {
+			"COLUMNS": [
+				"courses_dept",
+				"courses_avg"
+			],
+			"ORDER": "courses_avg"
+		}
+	},
+	"isQueryValid": false,
+	"result": "InsightError"
+}

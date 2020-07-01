@@ -1,0 +1,28 @@
+{
+    "title": "Valid regex value type in id",
+    "query": {
+        "WHERE": {
+            "AND":[
+                {
+                    "GT": {
+                        "courses_avg" : 97
+                    }
+                },
+                {
+                   "IS":{
+                    "courses_id":"1*"
+                     }
+                }
+            ]
+
+        },
+        "OPTIONS": {
+            "COLUMNS":[
+                "courses_dept",
+                "courses_avg"
+             ],
+             "ORDER":"courses_avg"
+    }
+},
+    "isQueryValid": true,
+    "result":[]}

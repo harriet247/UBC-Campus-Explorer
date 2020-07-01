@@ -1,0 +1,51 @@
+{
+    "title": "valid for having a apply with multiple keys array",
+    "query": {
+        "WHERE": {
+            "AND": [
+                {
+                    "IS": {
+                        "rooms_furniture": "*Tables*"
+                    }
+                },
+                {
+                    "GT": {
+                        "rooms_seats": 300
+                    }
+                }
+            ]
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "rooms_shortname",
+                "maxseats",
+                "countcheck"
+            ],
+            "ORDER": {
+                "dir": "DOWN",
+                "keys": [
+                    "rooms_shortname"
+                ]
+            }
+        },
+        "TRANSFORMATIONS": {
+            "GROUP": [
+                "rooms_shortname"
+            ],
+            "APPLY": [
+                {
+                    "maxseats": {
+                        "MAX" : "rooms_seats"
+                    }
+                },
+                {
+                    "countcheck": {
+                        "COUNT": "rooms_fullname"
+                    }
+                }
+            ]
+        }
+    }
+    ,
+    "isQueryValid": true,
+    "result":[{"rooms_shortname":"OSBO","maxseats":442,"countcheck":1},{"rooms_shortname":"LSC","maxseats":350,"countcheck":1},{"rooms_shortname":"HEBB","maxseats":375,"countcheck":1}]}
